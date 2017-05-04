@@ -27,15 +27,14 @@ public class FillContactUsFormTest {
     @Test
     public void fillContactUs(){
         firstName = "Diana";
-        lastName = "Uzun";
+        lastName = "Andrij";
+        phoneNumber = 123456789;
         contactUsFormPage = new ContactUsFormPage(driver);
         contactUsFormPage.fillFirstNameField(firstName);
         contactUsFormPage.fillLastNameField(lastName);
         Assert.assertEquals(contactUsFormPage.getFirstName(), firstName);
         Assert.assertEquals(contactUsFormPage.getLastNameName(), lastName);
     }
-
-
 
     @AfterTest
     public void closeBrowser(){
