@@ -26,8 +26,8 @@ public class FillContactUsFormTest {
 
     @Test
     public void fillContactUs(){
-        firstName = "Andriy";
-        lastName = "Kozak";
+        firstName = "Diana";
+        lastName = "Uzun";
         contactUsFormPage = new ContactUsFormPage(driver);
         contactUsFormPage.fillFirstNameField(firstName);
         contactUsFormPage.fillLastNameField(lastName);
