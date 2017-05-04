@@ -57,6 +57,11 @@ public class ContactUsFormPage {
         lastNameField.sendKeys(lastName);
     }
 
+    public void fillPhoneNumberField(String phoneNumber){
+        phoneNumberField.clear();
+        phoneNumberField.sendKeys(phoneNumber);
+    }
+
     public void clickOnSubmitButton(){
         submitButton.click();
     }
@@ -68,5 +73,7 @@ public class ContactUsFormPage {
     public String getLastNameName(){
         return lastNameField.getAttribute("value");
     }
+
+    public String getPhoneNumber(){return phoneNumberField.getAttribute("value");}
 }
 

@@ -16,7 +16,7 @@ public class FillContactUsFormTest {
 
     private String firstName;
     private String lastName;
-    private int phoneNumber;
+    private String phoneNumber;
 
     @BeforeTest
     public void openBrowser(){
@@ -27,13 +27,15 @@ public class FillContactUsFormTest {
     @Test
     public void fillContactUs(){
         firstName = "Diana";
-        lastName = "Andrij";
-        phoneNumber = 123456789;
+        lastName = "Uzun";
+        phoneNumber = "223-41-58";
         contactUsFormPage = new ContactUsFormPage(driver);
         contactUsFormPage.fillFirstNameField(firstName);
         contactUsFormPage.fillLastNameField(lastName);
+        contactUsFormPage.fillPhoneNumberField(phoneNumber);
         Assert.assertEquals(contactUsFormPage.getFirstName(), firstName);
         Assert.assertEquals(contactUsFormPage.getLastNameName(), lastName);
+        Assert.assertEquals(contactUsFormPage.getPhoneNumber(), phoneNumber);
     }
 
     @AfterTest
